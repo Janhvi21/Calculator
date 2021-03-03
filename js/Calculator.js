@@ -103,6 +103,4 @@ class Calculator {
         }
     }
 }
-export {
-    Calculator
-};
+module.exports=Calculator;
