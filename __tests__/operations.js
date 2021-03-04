@@ -1,8 +1,9 @@
+
 const {
     expect,
     beforeEach
 } = require('@jest/globals');
-const Calculator = require('../js/Calculator');
+import  Calculator from '../js/Calculator';
 let cal;
 beforeEach(() => {
     cal = new Calculator(2, 3);

@@ -1,4 +1,4 @@
-class Calculator {
+export default class Calculator {
     constructor(previousOp, currentOp) {
         this.previousOp = previousOp;
         this.currentOp = currentOp;
@@ -103,4 +103,4 @@ class Calculator {
         }
     }
 }
-module.exports=Calculator;
+export var __useDefault=true;
