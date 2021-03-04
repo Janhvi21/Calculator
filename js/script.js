@@ -17,35 +17,44 @@ const calculator = new Calculator(previousOp, currentOp);
 calculatorArea.addEventListener("keyup", function (event) {
     if (event.keyCode >= Key.ZERO && event.keyCode <= Key.NINE) {
         calculator.appendNumber(event.keyCode - 48);
-        calculator.updateDisplay();
+        updateDisplay();
     } else if (event.keyCode == Key.DOT) {
         calculator.appendNumber('.');
-        calculator.updateDisplay();
+        updateDisplay();
     }
 
 })
 numberButtons.forEach(button => {
     button.addEventListener('click', (event) => {
         calculator.appendNumber(button.innerText)
-        calculator.updateDisplay();
+        updateDisplay();
 
     })
 })
 operationButtons.forEach(button => {
     button.addEventListener('click', () => {
         calculator.chooseOperation(button.innerText)
-        calculator.updateDisplay();
+        updateDisplay();
     })
 })
 equalOp.addEventListener('click', button => {
-    calculator.compute()
-    calculator.updateDisplay()
+    calculator.calculateResult()
+    updateDisplay()
 })
 allClearOp.addEventListener('click', button => {
-    calculator.clear();
-    calculator.updateDisplay();
+    calculator.clearAll();
+    updateDisplay();
 })
 deleteOp.addEventListener('click', button => {
     calculator.delete();
-    calculator.updateDisplay();
+    updateDisplay();
 })
+
+const updateDisplay = function () {
+    calculator.currentOp.innerText = calculator.current;
+    if (calculator.operation != null) {
+        calculator.previousOp.innerText = calculator.previous + ' ' + calculator.operation;
+    } else {
+        calculator.previousOp.innerText = ''
+    }
+}

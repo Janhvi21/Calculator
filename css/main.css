@@ -26,6 +26,9 @@ body {
   box-shadow: -2px 2px 16px 0px rgb(0 0 0 / 80%);
   transition: 0.3s;
 }
+ 
+
+
 .calculator > button:hover {
   background-color: rgba(255, 255, 255, 0.4);
 }
@@ -53,3 +56,35 @@ body {
   color: white;
   font-size: 2.5rem;
 }
+@media only screen and (max-width: 600px) {
+  .calculator {
+    display: grid;
+    opacity: 1;
+    justify-content: center;
+    margin-right: 10%;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: minmax(60px, auto) repeat(5, 50px);
+  }
+  .calculator > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 1px 2px 12px 0px rgb(0 0 0 / 80%);
+    transition: 0.3s;
+  }
+  .calculator > button {
+    font-size: 1rem;
+  }
+  .output .previous {
+    font-size: 1rem;
+  }
+  .output .current {
+    font-size: 1.5rem;
+  }
+}
+
+

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">53.85% </span>
+                <span class="strong">57.38% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>35/65</span>
+                <span class='fraction'>35/61</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">43.48% </span>
+                <span class="strong">45.45% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>20/46</span>
+                <span class='fraction'>20/44</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/8</span>
+                <span class='fraction'>6/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">58.33% </span>
+                <span class="strong">62.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>35/60</span>
+                <span class='fraction'>35/56</span>
             </div>
         
             
@@ -155,14 +155,7 @@
 <a name='L96'></a><a href='#L96'>96</a>
 <a name='L97'></a><a href='#L97'>97</a>
 <a name='L98'></a><a href='#L98'>98</a>
-<a name='L99'></a><a href='#L99'>99</a>
-<a name='L100'></a><a href='#L100'>100</a>
-<a name='L101'></a><a href='#L101'>101</a>
-<a name='L102'></a><a href='#L102'>102</a>
-<a name='L103'></a><a href='#L103'>103</a>
-<a name='L104'></a><a href='#L104'>104</a>
-<a name='L105'></a><a href='#L105'>105</a>
-<a name='L106'></a><a href='#L106'>106</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L99'></a><a href='#L99'>99</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-yes">8x</span>
@@ -257,13 +250,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -271,10 +257,10 @@
     constructor(previousOp, currentOp) {
         this.previousOp = previousOp;
         this.currentOp = currentOp;
-        this.clear();
+        this.clearAll();
         this.isNumberNegative = false;
     }
-    clear() {
+    clearAll() {
         this.current = '';
         this.previous = '';
         this.operation = undefined;
@@ -301,7 +287,7 @@
 &nbsp;
         <span class="missing-if-branch" title="if path not taken" >I</span>if (this.previous !== '' || this.isNumberNegative) {
 <span class="cstat-no" title="statement not covered" >            if (this.isNumberNegative) <span class="cstat-no" title="statement not covered" >this.operation = operation;</span></span>
-<span class="cstat-no" title="statement not covered" >            this.compute();</span>
+<span class="cstat-no" title="statement not covered" >            this.calculateResult();</span>
         }
         this.operation = operation
         <span class="missing-if-branch" title="if path not taken" >I</span>if (this.isNumberNegative == true) {
@@ -313,7 +299,7 @@
         this.current = ''
 &nbsp;
     }
-    compute() {
+    calculateResult() {
         let result
         const prev = isNaN(parseFloat(this.previous)) ? <span class="branch-0 cbranch-no" title="branch not covered" >0 </span>: parseFloat(this.previous);
         const curr = parseFloat(this.current)
@@ -363,14 +349,7 @@
 <span class="cstat-no" title="statement not covered" >            return integerDisplay</span>
         }
     }
-<span class="fstat-no" title="function not covered" >    up</span>dateDisplay() {
-<span class="cstat-no" title="statement not covered" >        this.currentOp.innerText = this.getDisplayNumber(this.current);</span>
-<span class="cstat-no" title="statement not covered" >        if (this.operation != null) {</span>
-<span class="cstat-no" title="statement not covered" >            this.previousOp.innerText = `${this.getDisplayNumber(this.previous)} ${this.operation}`</span>
-        } else {
-<span class="cstat-no" title="statement not covered" >            this.previousOp.innerText = ''</span>
-        }
-    }
+   
 }
 export var __useDefault=true;</pre></td></tr></table></pre>
 
@@ -379,7 +358,7 @@ export var __useDefault=true;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Mar 04 2021 13:03:24 GMT-0500 (Eastern Standard Time)
+                at Thu Mar 04 2021 13:24:07 GMT-0500 (Eastern Standard Time)
             </div>
         </div>
         <script src="prettify.js"></script>

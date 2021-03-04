@@ -28,34 +28,34 @@ it('Test on Add Operation Whole', () => {
     cal.appendNumber('5');
     cal.chooseOperation('+');
     cal.appendNumber('6');
-    cal.compute()
+    cal.calculateResult()
     expect(cal.current).toBe(11);
 });
 it('Test on Multiply Operation Whole', () => {
     cal.appendNumber('5');
     cal.chooseOperation('*');
     cal.appendNumber('6');
-    cal.compute()
+    cal.calculateResult()
     expect(cal.current).toBe(30);
 });
 it('Test on Divide Operation Whole', () => {
     cal.appendNumber('30');
     cal.chooseOperation('/');
     cal.appendNumber('6');
-    cal.compute()
+    cal.calculateResult()
     expect(cal.current).toBe(5);
 });
 it('Test on Subtraction Operation Whole', () => {
     cal.appendNumber('30');
     cal.chooseOperation('-');
     cal.appendNumber('6');
-    cal.compute()
+    cal.calculateResult()
     expect(cal.current).toBe(24);
 });
 test('Test on Clear Operation Whole', () => {
     cal.appendNumber('30');
     cal.chooseOperation('-');
     cal.appendNumber('6');
-    cal.clear()
+    cal.clearAll()
     expect(cal.current).toBe('');
 });
