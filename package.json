@@ -16,7 +16,6 @@
     "serve": "^11.3.0"
   },
   "scripts": {
-    "start": "serve src",
     "test": "jest"
   },
   "repository": {
