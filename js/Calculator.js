@@ -1,8 +1,5 @@
 export default class Calculator {
-    constructor(previousOp, currentOp) {
-        this.previousOp = previousOp;
-        this.currentOp = currentOp;
-        this.isNumberNegative = false;
+    constructor() {
         this.clearAll();
     }
     //Function executes on 'AC' button click
@@ -10,6 +7,7 @@ export default class Calculator {
         this.current = '';
         this.previous = '';
         this.operation = undefined;
+        this.isNumberNegative = false;
     }
     //Function to delete last character
     delete() {
@@ -22,6 +20,7 @@ export default class Calculator {
     }
     //Specify the operation to perform
     chooseOperation(operation) {
+        debugger;
         if (this.current === "Error") {
             this.current = ''
             return
@@ -33,7 +32,6 @@ export default class Calculator {
             } else return
         }
         if (this.previous !== '' || this.isNumberNegative) {
-            if (this.isNumberNegative) this.operation = operation
             this.calculateResult()
         }
         this.isNumberNegative = false
@@ -43,12 +41,13 @@ export default class Calculator {
     }
     //calculate results on '=' button click
     calculateResult() {
-        this.current = this.getCalculationResult(this.operation);
+        this.current = this.getCalculationResult();
         this.operation = undefined
         this.previous = ''
     }
 
-    getCalculationResult(operation) {
+    getCalculationResult() {
+        debugger;
         let result
         const prev = isNaN(parseFloat(this.previous)) ? 0 : parseFloat(this.previous);
         const curr = parseFloat(this.current)
@@ -71,10 +70,8 @@ export default class Calculator {
                 else result = prev / curr;
             }
         }
-        results[operation]();
+        results[this.operation]();
         return result;
     }
-
-
 }
 export var __useDefault = true;

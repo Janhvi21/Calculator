@@ -51,10 +51,10 @@ deleteOp.addEventListener('click', button => { // Event triggered on 'DEL' butto
 })
 // Update Display for results and operation inserted
 const updateDisplay = function () {
-    calculator.currentOp.innerText = calculator.current;
+    currentOp.innerText = calculator.current;
     if (calculator.operation != null) {
-        calculator.previousOp.innerText = calculator.previous + ' ' + calculator.operation;
+        previousOp.innerText = calculator.previous + ' ' + calculator.operation;
     } else {
-        calculator.previousOp.innerText = ''
+       previousOp.innerText = ''
     }
 }
